@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Dad ♡ My First Teacher</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Pacifico&display=swap');
+
+:root{
+    --cream:#fffaf4;
+    --paper:#fffdf9;
+    --rose:#d98b9b;
+    --pink:#f5dce2;
+    --deep:#29222d;
+    --brown:#69504b;
+    --gold:#d6ae68;
+    --shadow:0 20px 60px rgba(45,30,30,.12);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--cream);
+    color:var(--brown);
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* =========================
+   FLOATING DECORATIONS
+========================= */
+
+#decorations{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:5;
+}
+
+.float{
+    position:absolute;
+    animation:float 7s ease-in-out infinite;
+    opacity:.65;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(0);
+    }
+    50%{
+        transform:translateY(-30px) rotate(12deg);
+    }
+}
+
+/* =========================
+   OPENING
+========================= */
+
+#opening{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    background:
+        radial-gradient(circle at 20% 20%,#fff 0,transparent 30%),
+        radial-gradient(circle at 80% 70%,#f9dfe5 0,transparent 30%),
+        linear-gradient(135deg,#fffaf4,#f7e5e8);
+}
+
+.opening-inner{
+    max-width:900px;
+    animation:fadeUp 1.8s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.eyebrow{
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:11px;
+    margin-bottom:25px;
+}
+
+.opening-inner h1{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(75px,14vw,170px);
+    line-height:.75;
+    color:var(--deep);
+}
+
+.script{
+    font-family:"Pacifico",cursive;
+    color:var(--rose);
+}
+
+.opening-inner .intro{
+    max-width:600px;
+    margin:40px auto;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.primary-btn{
+    border:0;
+    background:var(--deep);
+    color:white;
+    padding:17px 32px;
+    border-radius:100px;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:0 12px 30px rgba(40,30,40,.18);
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:0 20px 40px rgba(40,30,40,.25);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+#world{
+    display:none;
+}
+
+section{
+    position:relative;
+}
+
+.section{
+    min-height:100vh;
+    padding:110px 7%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.section-title{
+    text-align:center;
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(50px,7vw,90px);
+    line-height:1;
+    color:var(--deep);
+}
+
+.section-description{
+    max-width:650px;
+    text-align:center;
+    margin:25px auto 65px;
+    line-height:1.9;
+}
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome{
+    background:
+        radial-gradient(circle at 50% 40%,#fff 0,transparent 35%);
+}
+
+.big-heart{
+    text-align:center;
+    font-size:75px;
+    animation:heartbeat 2s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.15)}
+}
+
+/* =========================
+   CHARMS
+========================= */
+
+.charm-container{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.charm{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:.4s;
+    border:2px solid #fff;
+}
+
+.charm:hover{
+    transform:translateY(-12px) rotate(8deg) scale(1.1);
+}
+
+/* =========================
+   NOTES
+========================= */
+
+.notes-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:30px;
+}
+
+.note{
+    background:var(--paper);
+    min-height:240px;
+    padding:35px;
+    box-shadow:var(--shadow);
+    cursor:pointer;
+    transition:.4s;
+    position:relative;
+}
+
+.note:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.note:nth-child(odd){
+    transform:rotate(-1.5deg);
+}
+
+.note:hover{
+    transform:translateY(-12px) rotate(0) scale(1.03);
+}
+
+.pin{
+    position:absolute;
+    top:12px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.note-emoji{
+    font-size:38px;
+    margin-top:15px;
+}
+
+.note h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:30px;
+    color:var(--deep);
+    margin:20px 0 10px;
+}
+
+.note p{
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* =========================
+   LESSONS
+========================= */
+
+.lessons{
+    background:#f9e9ec;
+}
+
+.lesson{
+    background:white;
+    max-width:900px;
+    margin:15px auto;
+    width:100%;
+    padding:28px 35px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    box-shadow:0 10px 30px rgba(50,30,40,.08);
+    transition:.3s;
+}
+
+.lesson:hover{
+    transform:translateX(10px);
+}
+
+.lesson-number{
+    font-family:"Cormorant Garamond",serif;
+    font-size:40px;
+    color:var(--rose);
+}
+
+.lesson h3{
+    color:var(--deep);
+    margin-bottom:5px;
+}
+
+.lesson p{
+    line-height:1.6;
+}
+
+/* =========================
+   OPEN WHEN
+========================= */
+
+.envelopes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    max-width:1000px;
+    gap:25px;
+    margin:auto;
+}
+
+.envelope{
+    background:white;
+    padding:35px 20px;
+    text-align:center;
+    border-radius:20px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.envelope:hover{
+    transform:translateY(-10px) rotate(2deg);
+}
+
+.envelope-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+/* =========================
+   MEMORY WALL
+========================= */
+
+.memories{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
+
+.memory{
+    background:white;
+    padding:15px;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.memory:nth-child(odd){
+    transform:rotate(-2deg);
+}
+
+.memory:nth-child(even){
+    transform:rotate(2deg);
+}
+
+.memory:hover{
+    transform:rotate(0) scale(1.04);
+}
+
+.memory img{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    background:#eee;
+}
+
+.memory-caption{
+    padding:20px 10px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:23px;
+}
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    max-width:1000px;
+    margin:auto;
+    gap:15px;
+}
+
+.reason{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.reason:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   GIFTS
+========================= */
+
+.gifts{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+.gift{
+    text-align:center;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.gift:hover{
+    transform:translateY(-15px);
+}
+
+.gift-box{
+    font-size:100px;
+}
+
+.gift p{
+    margin-top:10px;
+    font-weight:600;
+}
+
+/* =========================
+   AWARD
+========================= */
+
+.award-section{
+    background:#f7efe1;
+}
+
+.award{
+    max-width:850px;
+    margin:auto;
+    padding:70px 40px;
+    text-align:center;
+    background:#fffdf8;
+    border:8px double var(--gold);
+    box-shadow:var(--shadow);
+}
+
+.award h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:60px;
+    color:var(--deep);
+}
+
+.award-name{
+    font-family:"Pacifico",cursive;
+    color:var(--rose);
+    font-size:50px;
+    margin:25px 0;
+}
+
+.award ul{
+    list-style:none;
+    line-height:2;
+}
+
+/* =========================
+   SECRET
+========================= */
+
+.secret{
+    text-align:center;
+}
+
+.lock{
+    font-size:100px;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.lock:hover{
+    transform:rotate(10deg) scale(1.1);
+}
+
+.counter{
+    margin-top:25px;
+    font-size:14px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+#final{
+    min-height:100vh;
+    background:
+        radial-gradient(circle at 50% 30%,#41344d,#211c29 60%);
+    color:white;
+    text-align:center;
+    justify-content:center;
+}
+
+#final .eyebrow{
+    color:#ddd;
+}
+
+#final h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(65px,10vw,130px);
+}
+
+.final-text{
+    max-width:700px;
+    margin:35px auto;
+    line-height:2.1;
+    color:#eee;
+}
+
+.final-love{
+    font-family:"Pacifico",cursive;
+    font-size:35px;
+    color:#f3bbc7;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    background:rgba(20,15,25,.75);
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+    backdrop-filter:blur(8px);
+}
+
+.modal-card{
+    background:#fffaf4;
+    width:min(600px,100%);
+    padding:55px 40px;
+    border-radius:30px;
+    text-align:center;
+    animation:modalIn .4s ease;
+    box-shadow:0 30px 100px rgba(0,0,0,.3);
+}
+
+@keyframes modalIn{
+    from{
+        transform:scale(.7) translateY(30px);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal-emoji{
+    font-size:65px;
+}
+
+.modal-card h2{
+    font-family:"Cormorant Garamond",serif;
+    color:var(--deep);
+    font-size:45px;
+    margin:15px 0;
+}
+
+.modal-card p{
+    line-height:1.9;
+}
+
+.close{
+    margin-top:30px;
+    padding:12px 25px;
+    border:0;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    top:-30px;
+    z-index:2000;
+    pointer-events:none;
+    animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:600px){
+
+    .section{
+        padding:80px 6%;
+    }
+
+    .opening-inner h1{
+        font-size:80px;
+    }
+
+    .charm{
+        width:75px;
+        height:75px;
+        font-size:30px;
+    }
+
+    .award{
+        padding:45px 20px;
+    }
+
+    .award h2{
+        font-size:43px;
+    }
+
+    .award-name{
+        font-size:38px;
+    }
+
+    .lesson{
+        padding:20px;
+    }
+
+    .modal-card{
+        padding:40px 25px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- =====================================
+     FLOATING DECORATIONS
+===================================== -->
+
+<div id="decorations">
+
+    <div class="float" style="left:8%;top:15%">✨</div>
+    <div class="float" style="left:18%;top:70%">🌸</div>
+    <div class="float" style="left:82%;top:20%">⭐</div>
+    <div class="float" style="left:75%;top:75%">💗</div>
+    <div class="float" style="left:50%;top:10%">🦋</div>
+    <div class="float" style="left:90%;top:55%">🌷</div>
+
+</div>
+
+
+<!-- =====================================
+     OPENING
+===================================== -->
+
+<section id="opening">
+
+    <div class="opening-inner">
+
+        <div class="eyebrow">
+            A little universe made for
+        </div>
+
+        <h1>
+            Dad
+            <br>
+            <span class="script">♡</span>
+        </h1>
+
+        <p class="intro">
+
+            You taught me things no classroom ever could.
+            So this Teacher's Day, I made you a little world
+            filled with memories, tiny surprises and
+            pieces of my heart.
+
+        </p>
+
+        <button class="primary-btn" onclick="enterWorld()">
+
+            ✨ Enter My Little World
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     MAIN WORLD
+===================================== -->
+
+<main id="world">
+
+
+<!-- WELCOME -->
+
+<section class="section welcome">
+
+    <div class="big-heart">❤️</div>
+
+    <div class="eyebrow" style="text-align:center;margin-top:20px">
+        Welcome home, Dad
+    </div>
+
+    <h2 class="section-title">
+        This little world<br>
+        belongs to you.
+    </h2>
+
+    <p class="section-description">
+
+        Everything you see here exists because of
+        a memory, a lesson, a sacrifice, a smile,
+        or simply because I love you.
+
+        <br><br>
+
+        <strong>And Dad...</strong><br>
+        don't just scroll.
+        <br>
+        <em>Click things.</em> 👀
+
+    </p>
+
+</section>
+
+
+<!-- =====================================
+     CHARMS
+===================================== -->
+
+<section class="section">
+
+    <div class="eyebrow" style="text-align:center">
+        Little things
+    </div>
+
+    <h2 class="section-title">
+        Pick a charm ✨
+    </h2>
+
+    <p class="section-description">
+        There are little messages hidden inside.
+        Some are silly. Some are serious.
+        All of them are for you.
+    </p>
+
+    <div class="charm-container">
+
+        <div class="charm"
+        onclick="discover('☕','Dad Fuel','For every morning that started with you taking care of everyone before yourself.')">
+        ☕
+        </div>
+
+        <div class="charm"
+        onclick="discover('📚','My First Teacher','You taught me lessons that could never fit inside a textbook.')">
+        📚
+        </div>
+
+        <div class="charm"
+        onclick="discover('🔑','Home','No matter where life takes me, you will always feel like home.')">
+        🔑
+        </div>
+
+        <div class="charm"
+        onclick="discover('⭐','My Hero','I might not say it every day, but I look up to you more than you know.')">
+        ⭐
+        </div>
+
+        <div class="charm"
+        onclick="discover('🌱','Growing Up','You didn't just watch me grow. You helped me become who I am.')">
+        🌱
+        </div>
+
+        <div class="charm"
+        onclick="discover('😂','Dad Mode','Professional advice giver. Professional worrier. Professional Dad. 😂')">
+        😂
+        </div>
+
+        <div class="charm"
+        onclick="discover('🎀','Just Because','You deserve something beautiful simply because you are you.')">
+        🎀
+        </div>
+
+        <div class="charm"
+        onclick="discover('❤️','Always','Whatever happens, wherever I go, you will always have my heart.')">
+        ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     NOTES
+===================================== -->
+
+<section class="section">
+
+    <div class="eyebrow" style="text-align:center">
+        Don't forget to read these
+    </div>
+
+    <h2 class="section-title">
+        Little notes for Dad 💌
+    </h2>
+
+    <p class="section-description">
+        Tiny pieces of my heart, scattered around this little world.
+    </p>
+
+    <div class="notes-grid">
+
+        <div class="note"
+        onclick="discover('🌻','Thank You','Thank you for all the things you did quietly, without expecting anyone to notice.')">
+
+            <div class="pin">📌</div>
+            <div class="note-emoji">🌻</div>
+
+            <h3>Thank you.</h3>
+
+            <p>
+                For everything you did,
+                even the things I never saw.
+            </p>
+
+        </div>
+
+
+        <div class="note"
+        onclick="discover('🥹','I Notice','I notice your sacrifices more than you think I do.')">
+
+            <div class="pin">📌</div>
+            <div class="note-emoji">🥹</div>
+
+            <h3>I notice.</h3>
+
+            <p>
+                Maybe I don't always say it,
+                but I notice.
+            </p>
+
+        </div>
+
+
+        <div class="note"
+        onclick="discover('🫶','My Safe Place','Whenever life becomes confusing, knowing that you are there makes everything feel a little easier.')">
+
+            <div class="pin">📌</div>
+            <div class="note-emoji">🫶</div>
+
+            <h3>My safe place.</h3>
+
+            <p>
+                Some people have houses.
+                I have a Dad.
+            </p>
+
+        </div>
+
+
+        <div class="note"
+        onclick="discover('😂','Okay Dad...','Fine. Fine. You were right. Happy now? 😂❤️')">
+
+            <div class="pin">📌</div>
+            <div class="note-emoji">😂</div>
+
+            <h3>Okay, okay...</h3>
+
+            <p>
+                You were right.
+                Probably.
+            </p>
+
+        </div>
+
+
+        <div class="note"
+        onclick="discover('🌙','Late Nights','Thank you for every late night, every worry, and every time you made sure I was okay.')">
+
+            <div class="pin">📌</div>
+            <div class="note-emoji">🌙</div>
+
+            <h3>Late nights.</h3>
+
+            <p>
+                You probably don't remember them.
+                I do.
+            </p>
+
+        </div>
+
+
+        <div class="note"
+        onclick="discover('💗','One Truth','No matter how old I get, there will always be a part of me that just wants Dad.')">
+
+            <div class="pin">📌</div>
+            <div class="note-emoji">💗</div>
+
+            <h3>One truth.</h3>
+
+            <p>
+                I'll always need you.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     LESSONS
+===================================== -->
+
+<section class="section lessons">
+
+    <div class="eyebrow" style="text-align:center">
+        My favourite subject
+    </div>
+
+    <h2 class="section-title">
+        Lessons from Dad 📚
+    </h2>
+
+    <p class="section-description">
+        You may not realize it, but you've been my teacher
+        for my entire life.
+    </p>
+
+
+    <div class="lesson">
+
+        <div class="lesson-number">01</div>
+
+        <div>
+            <h3>Be brave.</h3>
+            <p>
+                You taught me that being scared is okay,
+                but giving up isn't.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="lesson">
+
+        <div class="lesson-number">02</div>
+
+        <div>
+            <h3>Work hard.</h3>
+            <p>
+                You showed me that dreams become real
+                when you keep showing up.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="lesson">
+
+        <div class="lesson-number">03</div>
+
+        <div>
+            <h3>Be kind.</h3>
+            <p>
+                You taught me that success means nothing
+                if you lose your kindness along the way.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="lesson">
+
+        <div class="lesson-number">04</div>
+
+        <div>
+            <h3>Keep going.</h3>
+            <p>
+                Even when things get difficult,
+                take a breath and keep moving.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="lesson">
+
+        <div class="lesson-number">05</div>
+
+        <div>
+            <h3>Love deeply.</h3>
+            <p>
+                You taught me that love isn't just something
+                you say. It's something you do.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     OPEN WHEN
+===================================== -->
+
+<section class="section">
+
+    <div class="eyebrow" style="text-align:center">
+        Carefully folded letters
+    </div>
+
+    <h2 class="section-title">
+        Open when... 💌
+    </h2>
+
+    <p class="section-description">
+        Dad, you don't have to open them all at once.
+        Keep some for later. ♡
+    </p>
+
+
+    <div class="envelopes">
+
+        <div class="envelope"
+        onclick="discover('💌','Open when you are tired','You have done enough today. Please rest. You don't always have to be the strong one. ❤️')">
+
+            <div class="envelope-icon">💌</div>
+            <strong>You're tired</strong>
+
+        </div>
+
+
+        <div class="envelope"
+        onclick="discover('🌻','Open when you need a smile','Remember that somewhere in this world, your child is smiling because of you.')">
+
+            <div class="envelope-icon">🌻</div>
+            <strong>You need a smile</strong>
+
+        </div>
+
+
+        <div class="envelope"
+        onclick="discover('⭐','Open when you are proud','If you are proud of me, please know that I am proud of you too.')">
+
+            <div class="envelope-icon">⭐</div>
+            <strong>You're proud</strong>
+
+        </div>
+
+
+        <div class="envelope"
+        onclick="discover('🫂','Open when you miss me','Come here. Consider this website one very long virtual hug.')">
+
+            <div class="envelope-icon">🫂</div>
+            <strong>You miss me</strong>
+
+        </div>
+
+
+        <div class="envelope"
+        onclick="discover('❤️','Open when you wonder','Yes. I love you. More than this website could ever explain.')">
+
+            <div class="envelope-icon">❤️</div>
+            <strong>You wonder</strong>
+
+        </div>
+
+
+        <div class="envelope"
+        onclick="discover('😂','Open when you need Dad validation','Yes Dad. You are officially awesome. I have checked the data.')">
+
+            <div class="envelope-icon">😂</div>
+            <strong>You need validation</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     MEMORY WALL
+===================================== -->
+
+<section class="section">
+
+    <div class="eyebrow" style="text-align:center">
+        Our little archive
+    </div>
+
+    <h2 class="section-title">
+        Memories 📸
+    </h2>
+
+    <p class="section-description">
+
+        Replace these three images with your favourite
+        pictures of you and Dad.
+
+    </p>
+
+
+    <div class="memories">
+
+        <div class="memory">
+
+            <img src="photo1.jpg">
+
+            <div class="memory-caption">
+                One of my favourite moments with you. ❤️
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photo2.jpg">
+
+            <div class="memory-caption">
+                A memory I would happily live again.
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photo3.jpg">
+
+            <div class="memory-caption">
+                Just Dad being Dad. ♡
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="photo4.jpg">
+
+            <div class="memory-caption">
+                Another little piece of our story.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     100 REASONS
+===================================== -->
+
+<section class="section">
+
+    <div class="eyebrow" style="text-align:center">
+        I could keep going forever
+    </div>
+
+    <h2 class="section-title">
+        Reasons I love you ❤️
+    </h2>
+
+    <p class="section-description">
+        A few little ones. There are honestly too many to count.
+    </p>
+
+
+    <div class="reasons">
+
+        <div class="reason" onclick="discover('❤️','01','You make me feel safe.')">01</div>
+        <div class="reason" onclick="discover('❤️','02','You believe in me.')">02</div>
+        <div class="reason" onclick="discover('❤️','03','You always try.')">03</div>
+        <div class="reason" onclick="discover('❤️','04','You listen.')">04</div>
+        <div class="reason" onclick="discover('❤️','05','You protect me.')">05</div>
+        <div class="reason" onclick="discover('❤️','06','You make me laugh.')">06</div>
+        <div class="reason" onclick="discover('❤️','07','You give the best advice.')">07</div>
+        <div class="reason" onclick="discover('❤️','08','You never stop caring.')">08</div>
+        <div class="reason" onclick="discover('❤️','09','You taught me strength.')">09</div>
+        <div class="reason" onclick="discover('❤️','10','You are my Dad.')">10</div>
+        <div class="reason" onclick="discover('❤️','11','You are always there.')">11</div>
+        <div class="reason" onclick="discover('❤️','12','You make ordinary days special.')">12</div>
+        <div class="reason" onclick="discover('❤️','13','You taught me responsibility.')">13</div>
+        <div class="reason" onclick="discover('❤️','14','You celebrate my little wins.')">14</div>
+        <div class="reason" onclick="discover('❤️','15','You make me feel loved.')">15</div>
+        <div class="reason" onclick="discover('❤️','16','You are my role model.')">16</div>
+        <div class="reason" onclick="discover('❤️','17','You never give up on me.')">17</div>
+        <div class="reason" onclick="discover('❤️','18','You taught me to dream.')">18</div>
+        <div class="reason" onclick="discover('❤️','19','You are wonderfully you.')">19</div>
+        <div class="reason" onclick="discover('❤️','20','Because you are Dad.')">20</div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     GIFTS
+===================================== -->
+
+<section class="section">
+
+    <div class="eyebrow" style="text-align:center">
+        I brought you something
+    </div>
+
+    <h2 class="section-title">
+        Three little gifts 🎁
+    </h2>
+
+    <p class="section-description">
+        Choose one. Then another. Then another.
+    </p>
+
+
+    <div class="gifts">
+
+        <div class="gift"
+        onclick="gift('🌻','A little sunshine','I hope your days are always filled with the same warmth you have given me.')">
+
+            <div class="gift-box">🎁</div>
+            <p>Gift One</p>
+
+        </div>
+
+
+        <div class="gift"
+        onclick="gift('📖','A memory','If I could keep one thing forever, it would be all the little moments we shared.')">
+
+            <div class="gift-box">🎁</div>
+            <p>Gift Two</p>
+
+        </div>
+
+
+        <div class="gift"
+        onclick="gift('❤️','The real gift','My love. You already had it. You always will.')">
+
+            <div class="gift-box">🎁</div>
+            <p>Gift Three</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     AWARD
+===================================== -->
+
+<section class="section award-section">
+
+    <div class="award">
+
+        <div class="eyebrow">
+            Officially presented to
+        </div>
+
+        <h2>
+            The World's<br>
+            Best Teacher
+        </h2>
+
+        <div class="award-name">
+            Dad ❤️
+        </div>
+
+        <ul>
+
+            <li>🏆 Best Advice</li>
+            <li>🏆 Best Protector</li>
+            <li>🏆 Best Support System</li>
+            <li>🏆 Best Dad Jokes</li>
+            <li>🏆 Most Patient Teacher</li>
+            <li>🏆 Lifetime Achievement Award</li>
+
+        </ul>
+
+        <br>
+
+        <button class="primary-btn"
+        onclick="celebrate()">
+
+            🎉 Accept Your Award
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     SECRET DISCOVERY
+===================================== -->
+
+<section class="section secret">
+
+    <div class="eyebrow">
+        Wait...
+    </div>
+
+    <h2 class="section-title">
+        There's something hidden here. 🔐
+    </h2>
+
+    <p class="section-description">
+
+        You've already discovered
+        <strong id="count">0</strong>
+        little surprises.
+
+        <br><br>
+
+        Keep looking.
+
+    </p>
+
+    <div class="lock"
+    onclick="secretClick()">
+
+        🔐
+
+    </div>
+
+    <div class="counter">
+
+        Find enough surprises to unlock something special.
+
+    </div>
+
+</section>
+
+
+<!-- =====================================
+     FINAL
+===================================== -->
+
+<section class="section" id="final">
+
+    <div class="eyebrow">
+        One last thing, Dad...
+    </div>
+
+    <h2>
+        Dad.
+    </h2>
+
+    <div class="final-text">
+
+        You taught me how to walk.
+
+        <br>
+
+        You taught me how to stand.
+
+        <br>
+
+        You taught me how to try again.
+
+        <br>
+
+        You taught me how to be strong.
+
+        <br><br>
+
+        But the most beautiful thing
+        you ever taught me...
+
+        <br><br>
+
+        was what it feels like
+        to be loved.
+
+        <br><br>
+
+        I may grow older.
+
+        <br>
+
+        I may go places.
+
+        <br>
+
+        I may build a life of my own.
+
+        <br><br>
+
+        But there will always be
+        a little piece of me
+        that is simply...
+
+        <br><br>
+
+        <span class="final-love">
+            Dad's girl. ❤️
+        </span>
+
+    </div>
+
+    <div class="final-love">
+
+        Happy Teacher's Day, Dad. ♡
+
+    </div>
+
+    <br>
+
+    <button class="primary-btn"
+    onclick="celebrate()">
+
+        ✨ One More Surprise
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================
+     MODAL
+===================================== -->
+
+<div class="modal" id="modal">
+
+    <div class="modal-card">
+
+        <div class="modal-emoji" id="modalEmoji">
+            ❤️
+        </div>
+
+        <h2 id="modalTitle">
+            For Dad
+        </h2>
+
+        <p id="modalText">
+            I love you.
+        </p>
+
+        <button class="close"
+        onclick="closeModal()">
+
+            Close ♡
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =====================================
+   VARIABLES
+===================================== */
+
+let discoveries = 0;
+
+
+/* =====================================
+   ENTER
+===================================== */
+
+function enterWorld(){
+
+    document.getElementById("opening").style.display="none";
+
+    document.getElementById("world").style.display="block";
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================
+   DISCOVER MESSAGE
+===================================== */
+
+function discover(emoji,title,text){
+
+    discoveries++;
+
+    document.getElementById("count").innerText=discoveries;
+
+    document.getElementById("modalEmoji").innerText=emoji;
+
+    document.getElementById("modalTitle").innerText=title;
+
+    document.getElementById("modalText").innerText=text;
+
+    document.getElementById("modal").style.display="flex";
+
+    if(discoveries===10){
+
+        setTimeout(()=>{
+
+            celebrate();
+
+            showSecret();
+
+        },500);
+
+    }
+
+}
+
+
+/* =====================================
+   GIFT
+===================================== */
+
+function gift(emoji,title,text){
+
+    discoveries++;
+
+    document.getElementById("count").innerText=discoveries;
+
+    document.getElementById("modalEmoji").innerText=emoji;
+
+    document.getElementById("modalTitle").innerText=title;
+
+    document.getElementById("modalText").innerText=text;
+
+    document.getElementById("modal").style.display="flex";
+
+}
+
+
+/* =====================================
+   CLOSE MODAL
+===================================== */
+
+function closeModal(){
+
+    document.getElementById("modal").style.display="none";
+
+}
+
+
+/* =====================================
+   SECRET
+===================================== */
+
+function secretClick(){
+
+    if(discoveries>=10){
+
+        showSecret();
+
+    }else{
+
+        discover(
+            "🔒",
+            "Not yet...",
+            "Find at least 10 little surprises around the website first. Keep exploring, Dad. 👀❤️"
+        );
+
+    }
+
+}
+
+
+function showSecret(){
+
+    discover(
+        "🌌",
+        "You found the secret.",
+        "If I could give you one thing, Dad, it would be the chance to see yourself through my eyes. You would finally understand how incredibly special you are to me. ❤️"
+    );
+
+}
+
+
+/* =====================================
+   CONFETTI
+===================================== */
+
+function celebrate(){
+
+    const pieces=[
+        "❤️",
+        "✨",
+        "⭐",
+        "🌸",
+        "💗",
+        "🎉",
+        "🎀",
+        "🦋"
+    ];
+
+    for(let i=0;i<120;i++){
+
+        const piece=document.createElement("div");
+
+        piece.className="confetti";
+
+        piece.innerText=
+            pieces[Math.floor(Math.random()*pieces.length)];
+
+        piece.style.left=
+            Math.random()*100+"vw";
+
+        piece.style.fontSize=
+            (10+Math.random()*25)+"px";
+
+        piece.style.animationDuration=
+            (2+Math.random()*4)+"s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(()=>{
+            piece.remove();
+        },6000);
+
+    }
+
+}
+
+
+/* =====================================
+   ESCAPE MODAL
+===================================== */
+
+document.getElementById("modal").addEventListener(
+    "click",
+    function(e){
+
+        if(e.target===this){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+/* =====================================
+   ESC KEY
+===================================== */
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(e.key==="Escape"){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
